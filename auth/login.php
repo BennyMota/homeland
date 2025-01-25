@@ -3,6 +3,11 @@
 
 <?php
 
+  if (isset($_SESSION['username'])){
+
+    header("Location: ".APPURL."");
+
+  }
   if (isset($_POST['submit'])){
 
     if (empty($_POST['email']) OR empty($_POST['password'])){
@@ -24,7 +29,14 @@
         // echo "email is valid";
 
         if(password_verify($password, $fetch['mypassword'])){
-          echo "LOGGED IN";
+          
+          $_SESSION['username'] = $fetch['username'];
+          $_SESSION['email'] = $fetch['email'];
+          $_SESSION['user_id'] = $fetch['id'];
+
+          header("Location: ".APPURL."");
+
+
         }else{
           echo "<script>alert('email or password is invalid');</script>";
         }

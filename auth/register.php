@@ -3,6 +3,11 @@
 
 <?php 
 
+  if (isset($_SESSION['username'])){
+
+    header("Location: ".APPURL."");
+
+  }
   if (isset($_POST['submit'])){
 
     if (empty($_POST['username']) OR empty($_POST['email']) OR empty($_POST['password'])){
