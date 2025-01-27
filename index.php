@@ -36,16 +36,16 @@
     <div class="site-section site-section-sm pb-0">
       <div class="container">
         <div class="row">
-          <form class="form-search col-md-12" style="margin-top: -100px;">
+          <form class="form-search col-md-12" method="POST" action="search.php" style="margin-top: -100px;">
             <div class="row  align-items-end">
               <div class="col-md-3">
                 <label for="list-types">Listing Types</label>
                 <div class="select-wrap">
                   <span class="icon icon-arrow_drop_down"></span>
-                  <select name="list-types" id="list-types" class="form-control d-block rounded-0">
-                    <option value="">Condo</option>
-                    <option value="">Commercial Building</option>
-                    <option value="">Land Property</option>
+                  <select name="types" id="list-types" class="form-control d-block rounded-0">
+                    <option value="condo">Condo</option>
+                    <option value="commercial building">Commercial Building</option>
+                    <option value="land property">Land Property</option>
                   </select>
                 </div>
               </div>
@@ -53,10 +53,10 @@
                 <label for="offer-types">Offer Type</label>
                 <div class="select-wrap">
                   <span class="icon icon-arrow_drop_down"></span>
-                  <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
-                    <option value="">sale</option>
-                    <option value="">rent</option>
-                    <option value="">lease</option>
+                  <select name="offers" id="offer-types" class="form-control d-block rounded-0">
+                    <option value="sale">sale</option>
+                    <option value="rent">rent</option>
+                    <option value="lease">lease</option>
                   </select>
                 </div>
               </div>
@@ -64,17 +64,17 @@
                 <label for="select-city">Select City</label>
                 <div class="select-wrap">
                   <span class="icon icon-arrow_drop_down"></span>
-                  <select name="select-city" id="select-city" class="form-control d-block rounded-0">
-                    <option value="">New York</option>
-                    <option value="">Brooklyn</option>
-                    <option value="">London</option>
-                    <option value="">Japan</option>
-                    <option value="">Philippines</option>
+                  <select name="cities" id="select-city" class="form-control d-block rounded-0">
+                    <option value="new york">New York</option>
+                    <option value="brooklyn">Brooklyn</option>
+                    <option value="london">London</option>
+                    <option value="japan">Japan</option>
+                    <option value="philippines">Philippines</option>
                   </select>
                 </div>
               </div>
               <div class="col-md-3">
-                <input type="submit" class="btn btn-success text-white btn-block rounded-0" value="Search">
+                <input type="submit" name="submit" class="btn btn-success text-white btn-block rounded-0" value="Search">
               </div>
             </div>
           </form>
